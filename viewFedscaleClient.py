@@ -16,9 +16,14 @@ def load_client_profile(file_path):
     return global_client_profile
 
 
-client_profiles = load_client_profile("client_device_capacity")
+client_profiles = load_client_profile("data/client_device_capacity")
 client_profiles_list = [list(v.values())
-                        for v in client_profiles.values()][:1000]
+                        for v in client_profiles.values()][:10000]
 client_profiles_arr = np.array(client_profiles_list)
+client_profiles_arr[:, 1] = client_profiles_arr[:, 1] / 10000
 plt.scatter(x=client_profiles_arr[:, 0], y=client_profiles_arr[:, 1])
-plt.show()
+plt.xlabel("Compute time (ms)")
+plt.ylabel("Bandwidth (Mbps)")
+plt.title("FedScale client capacity")
+# plt.show()
+plt.savefig("figs/fedscale_client_capacity.png")
