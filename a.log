@@ -1,0 +1,50 @@
+(07-22) 02:12:53 INFO     [aggregator.py:55] Job args Namespace(adam_epsilon=1e-08, backbone='./resnet50.pth', backend='gloo', base_port=38146, batch_size=20, bidirectional=True, blacklist_max_len=0.3, blacklist_rounds=-1, block_size=64, cfg_file='./utils/rcnn/cfgs/res101.yml', change_num=20, clf_block_size=32, clip_bound=0.9, clock_factor=1.0, conf_path='~/dataset/', cuda_device=None, cut_off_util=0.05, data_cache='', data_dir='/mnt/fl/data/femnist', data_map_file='/mnt/fl/data/femnist/client_data_mapping/train.csv', data_set='femnist', dataset_total_worker=2800, decay_epoch=10, decay_factor=0.98, device_avail_file='/mnt/fl/data/device_info/client_behave_trace', device_conf_file='/mnt/fl/data/device_info/client_device_capacity_ul_dl', dump_epoch=10000000000.0, embedding_file='glove.840B.300d.txt', epochs=2000, epsilon=0.9, eval_interval=5, executor_configs='127.0.0.1:[4]', exploration_alpha=0.3, exploration_decay=0.98, exploration_factor=0.9, exploration_min=0.3, filter_less=22, filter_more=1000000000000000.0, finetune=False, fl_method='FedDC', gamma=0.9, gradient_policy=None, hidden_layers=7, hidden_size=256, input_dim=0, job_name='dryrun', labels_path='labels.json', learning_rate=0.01, line_by_line=False, local_steps=10, log_path='/mnt/fl', loss_decay=0.2, malicious_factor=1000000000000000.0, manager_port=28109, max_prefetch_round=5, memory_capacity=2000, min_learning_rate=5e-05, mlm=False, mlm_probability=0.15, model='mobilenet_v2', model_size=65536, n_actions=2, n_states=4, noise_dir=None, noise_factor=0.1, noise_max=0.5, noise_min=0.0, noise_prob=0.4, num_class=62, num_classes=35, num_executors=4, num_loaders=2, output_dim=0, overcommitment=1.3, overwrite_cache=False, pacer_delta=5, pacer_step=20, proxy_mu=0.1, ps_ip='127.0.0.1', ps_port='6084', rnn_type='lstm', round_penalty=2.0, round_threshold=30, sample_mode='random', sample_rate=16000, sample_seed=233, sample_window=5.0, sampling_strategy='STICKY', shared_mask_ratio=0.16, spec_augment=False, speed_volume_perturb=False, sticky_group_size=400, target_replace_iter=15, task='cv', test_bsz=32, test_manifest='data/test_manifest.csv', test_output_dir='./logs/server', test_ratio=1.0, test_size_file='', this_rank=0, time_stamp='0722_021252', total_mask_ratio=0.2, total_worker=100, train_manifest='data/train_manifest.csv', train_size_file='', train_uniform=False, upload_epoch=20, use_cuda=True, vocab_tag_size=500, vocab_token_size=10000, weight_decay=0, window='hamming', window_size=0.02, window_stride=0.01, yogi_beta=0.9, yogi_beta2=0.99, yogi_eta=0.003, yogi_tau=1e-08)
+
+0.7 augmentation
+1.0 download
+1.0 upload
+
+
+
+(07-22) 18:26:52 INFO     [aggregator.py:729] Cumulative bandwidth usage:
+             total (excluding overcommit): 5707524858.41 kbit
+             total (including overcommit): 6589475568.88 kbit
+             downstream: 3690483059.54 kbit	upstream: 2017041798.88 kbit	prefetch: 0.00 kbit	overcommit: 881950710.46 kbit
+(07-22) 18:26:52 INFO     [aggregator.py:741] Cumulative round durations:
+             (wall clock time) total:	39589.79 s
+             total_dl:	10809.20 s	             total_ul:	25177.31 s	             total_compute:	3603.28 s
+             avg_dl:	21.45 s	             avg_ul:	49.95 s	             avg_compute:	7.15 s
+             client_avg_dl:	3.25 s	             client_avg_ul:	6.23 s	             client_avg_compute:	6.38 s 
+
+augmentation 0.4
+download 1.2
+upload 0.8
+
+
+
+
+mobilenet_v2
+Prefetch
+(07-22) 22:45:07 INFO     [aggregator.py:715] Wall clock: 5484 s, Epoch: 225, Planned participants: 130, Succeed participants: 100, Training loss: 1.673202238360296
+(07-22) 22:45:07 INFO     [aggregator.py:729] Cumulative bandwidth usage:
+             total (excluding overcommit): 1325402095.59 kbit
+             total (including overcommit): 1437996937.84 kbit
+             downstream: 494731168.82 kbit	upstream: 384333135.16 kbit	prefetch: 446337791.61 kbit	overcommit: 112594842.25 kbit
+(07-22) 22:45:07 INFO     [aggregator.py:741] Cumulative round durations:
+             (wall clock time) total:	5484.21 s
+             total_dl:	1360.59 s	             total_ul:	1920.43 s	             total_compute:	2203.20 s
+             avg_dl:	6.07 s	             avg_ul:	8.57 s	             avg_compute:	9.84 s
+             client_avg_dl:	1.20 s	             client_avg_ul:	1.54 s	             client_avg_compute:	6.23 s    
+
+No Prefetch
+(07-22) 05:45:30 INFO     [aggregator.py:714] Wall clock: 9330 s, Epoch: 225, Planned participants: 130, Succeed participants: 100, Training loss: 1.5609194828660948
+(07-22) 05:45:30 INFO     [aggregator.py:728] Cumulative bandwidth usage:
+             total (excluding overcommit): 1225496970.58 kbit
+             total (including overcommit): 1414302450.45 kbit
+             downstream: 841163835.42 kbit	upstream: 384333135.16 kbit	prefetch: 0.00 kbit	overcommit: 188805479.88 kbit
+(07-22) 05:45:30 INFO     [aggregator.py:740] Cumulative round durations:
+             (wall clock time) total:	9329.57 s
+             total_dl:	2066.37 s 2582 s             total_ul:	3776.22 s 3147 s             total_compute:	3486.98 s 1992 s
+             avg_dl:	9.22 s	             avg_ul:	16.86 s	             avg_compute:	15.57 s
+             client_avg_dl:	1.86 s	             client_avg_ul:	2.36 s	             client_avg_compute:	10.98 s   
+

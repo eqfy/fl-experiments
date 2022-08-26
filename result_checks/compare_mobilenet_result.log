@@ -1,0 +1,27 @@
+mobilenet_v2
+
+No Prefetch
+(07-22) 05:45:30 INFO     [aggregator.py:714] Wall clock: 9330 s, Epoch: 225, Planned participants: 130, Succeed participants: 100, Training loss: 1.5609194828660948
+(07-22) 05:45:30 INFO     [aggregator.py:728] Cumulative bandwidth usage:
+             total (excluding overcommit): 1225496970.58 kbit
+             total (including overcommit): 1414302450.45 kbit
+             downstream: 841163835.42 kbit	upstream: 384333135.16 kbit	prefetch: 0.00 kbit	overcommit: 188805479.88 kbit
+(07-22) 05:45:30 INFO     [aggregator.py:740] Cumulative round durations:
+             (wall clock time) total:	9329.57 s
+             total_dl:	2066.37 s 2582 s             total_ul:	3776.22 s 3147 s             total_compute:	3486.98 s 1992 s
+             avg_dl:	9.22 s	             avg_ul:	16.86 s	             avg_compute:	15.57 s
+             client_avg_dl:	1.86 s	             client_avg_ul:	2.36 s	             client_avg_compute:	10.98 s   
+
+
+Prefetch
+(07-22) 22:45:07 INFO     [aggregator.py:715] Wall clock: 5484 s, Epoch: 225, Planned participants: 130, Succeed participants: 100, Training loss: 1.673202238360296
+(07-22) 22:45:07 INFO     [aggregator.py:729] Cumulative bandwidth usage:
+             total (excluding overcommit): 1325402095.59 kbit
+             total (including overcommit): 1437996937.84 kbit
+             downstream: 494731168.82 kbit	upstream: 384333135.16 kbit	prefetch: 446337791.61 kbit	overcommit: 112594842.25 kbit
+(07-22) 22:45:07 INFO     [aggregator.py:741] Cumulative round durations:
+             (wall clock time) total:	5484.21 s
+             total_dl:	1360.59 s	             total_ul:	1920.43 s	             total_compute:	2203.20 s
+             avg_dl:	6.07 s	             avg_ul:	8.57 s	             avg_compute:	9.84 s
+             client_avg_dl:	1.20 s	             client_avg_ul:	1.54 s	             client_avg_compute:	6.23 s    
+
