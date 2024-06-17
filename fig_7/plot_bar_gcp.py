@@ -39,7 +39,7 @@ font2 = {
 
 plt.ylabel('Training Time / Round (s)', font2)
 # plt.title('')
-plt.xticks(ind, ("FedAvg", "STC", "APF", "FedDC"))
+plt.xticks(ind, ("FedAvg", "STC", "APF", "GlueFL"))
 plt.yticks(np.arange(0, 26, 5))
 plt.legend((p1[0], p2[0], p3[0]), ('Download Time', 'Upload Time', 'Computation Time'), prop=font2)
 ax1.grid(axis="y", linestyle="-.", zorder=0)
